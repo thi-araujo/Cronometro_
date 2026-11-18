@@ -69,6 +69,8 @@ def configurar_estilo(raiz: tk.Tk) -> None:
     estilo.configure("Vertical.TScrollbar", background=CORES["borda"], troughcolor=CORES["painel"],
                      borderwidth=0, arrowcolor=CORES["texto_suave"], bordercolor=CORES["painel"],
                      lightcolor=CORES["borda"], darkcolor=CORES["borda"])
+    estilo.map("Vertical.TScrollbar", background=[("disabled", CORES["painel"]), ("active", "#475569")],
+               arrowcolor=[("disabled", CORES["painel"])])
 
 
 class AbaCronometro(ttk.Frame):
